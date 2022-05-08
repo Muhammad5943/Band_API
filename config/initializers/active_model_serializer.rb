@@ -1,0 +1,1 @@
+# ActiveModelSerializers.config.adapter = :json_api (reformating when backend only use ruby)

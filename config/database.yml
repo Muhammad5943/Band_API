@@ -1,0 +1,30 @@
+# SQLite. Versions 3.8.0 and up are supported.
+#   gem install sqlite3
+#
+#   Ensure the SQLite 3 gem is defined in your Gemfile
+#   gem "sqlite3"
+#
+default: &default
+  adapter: postgresql
+  encoding: unicode
+  host: localhost
+  port: 5432
+  # For details on connection pooling, see Rails configuration guide
+  # https://guides.rubyonrails.org/configuring.html#database-pooling
+  pool: <%= ENV.fetch("RAILS_MAX_THREADS") { 5 } %>
+  username: postgres
+  password: Landung25061995
+  timeout: 5000
+
+development:
+  <<: *default
+  database: band_api_clone_development
+
+test:
+  <<: *default
+  database: band_api_clone_test
+
+production:
+  <<: *default
+  database: band_api_clone_production
+
